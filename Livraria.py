@@ -8,32 +8,16 @@ class Livro():
         self.valor = valor
         self.qtd_estoque = qtd_estoque
         self.historico = [titulo, cod, editora, area, valor, qtd_estoque]
-        return f'{self.historico}'
+    
+    def ListaLivros(self):
+        for livro in self.historico:
+            print(livro)
 
-    def Exibir(self):
-        self.historico.split()
-        print(self.Historico)
+# def Exibir(self):
+#     for info in self.historico:
+#         print(info)
 
-objeto = Livro('Sapiens', '1133','Dark Side','Científico','100','29') 
 
-objeto.Historico()
-    # def historicoValor(self):
-    #     valores = []
-    #     valores.append(self.list)
 
-    # #Exibição do menu
-    # def Menu(self, opcap):
-    #     match opcap:
-    #         case 1:
-    #             return
-    #         case 2:
-    #             return
-    #         case 3:
-    #             return
-        
-    # #Pesquisa do livro
-
-    # def Valor(self):
-    #     valorLivro()
         
         
