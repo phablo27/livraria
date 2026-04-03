@@ -13,10 +13,12 @@ class Livro():
         for livro in self.historico:
             print(livro)
 
-# def Exibir(self):
-#     for info in self.historico:
-#         print(info)
-
+    def __str__(self):
+        return(f'>>>>>>>cod#{self.cod}\n'
+               f'Título/Editora: {self.titulo}/{self.editora}\n'
+               f'Categoria: {self.area}\n'
+               f'Valor: R$ {self.valor:.2f}\n'
+               f'Estoque: {self.qtd_estoque}\n')
 
 
         
