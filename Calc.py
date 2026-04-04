@@ -59,12 +59,14 @@ def ValorLivro(valor_ref, lista_livros):
     for livro in lista_livros:
         if livro.valor < limite:
             print('=' * 30)
-            print(f'Livros com valores menores que R% {livro.valor}') 
+            print(f'Livros com valores menores que R$ {limite:.2f}') 
+            print('=' * 30)
             print(livro)
             achou = True
     if not achou:
+        print('=' * 30)
         print('Nenhum livro menor que o valor inserido.')
-
+        print('=' * 30)
 
 def BuscaEstoque(estoque, lista_livros):
     estoque = int(estoque)
@@ -75,16 +77,18 @@ def BuscaEstoque(estoque, lista_livros):
             print(livro)
             achou = True
     if not achou:
-        print(f'Nenhum livro com quantidade igual ou maior que {estoque} disponível em estoque.')
-
+        print('=' * 30)
+        print(f'Não disponível abaixo dessa quantidade.')
+        print('=' * 30)
 
 def ValorTotalBiblioteca(lista_livros):
     total = 0.0
     for livro in lista_livros:
-        print('=' * 30)
-        print(f'Valor total na biblioteca: R$ {livro.total:.2f}')
-        print('=' * 30)
+        total += livro.valor
+    ('=' * 30)
+    print(f'Valor total na biblioteca: R$ {total:.2f}')
+    ('=' * 30)
     if not lista_livros:
-        print(f'Biblioteca Vazia. Total de R$ {livro.total:.2f}')
+        print(f'Biblioteca Vazia. Total de R$ {total:.2f}')
 
     
