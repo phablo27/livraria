@@ -75,7 +75,7 @@ while True:
                 LimparTerminal()
 
             except ValueError: 
-                print('Erro: Digite apenas letras/palabras')
+                print('Erro: Digite apenas letras/palavras')
                 input("\nPressione [Enter] para voltar ao menu...")
 
         case '5':

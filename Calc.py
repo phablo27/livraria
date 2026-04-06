@@ -57,7 +57,7 @@ def ValorLivro(valor_ref, lista_livros):
     limite = float(valor_ref)
     achou = False
     for livro in lista_livros:
-        if livro.valor < limite:
+        if livro.valor <= limite:
             print('=' * 30)
             print(f'Livros com valores menores que R$ {limite:.2f}') 
             print('=' * 30)
@@ -72,23 +72,23 @@ def BuscaEstoque(estoque, lista_livros):
     estoque = int(estoque)
     achou = False
     for livro in lista_livros:
-        if estoque >= livro.qtd_estoque:
+        if livro.qtd_estoque > estoque:
             print('=' * 30, 'Listagem de livros baseada na quantidade informada...', '=' * 30)
             print(livro)
             achou = True
     if not achou:
         print('=' * 30)
-        print(f'Não disponível abaixo dessa quantidade.')
+        print(f'Não disponível acima dessa quantidade.')
         print('=' * 30)
 
 def ValorTotalBiblioteca(lista_livros):
-    total = 0.0
+    valor_total = 0.0
     for livro in lista_livros:
-        total += livro.valor
+        valor_total += livro.total
     ('=' * 30)
-    print(f'Valor total na biblioteca: R$ {total:.2f}')
+    print(f'Valor total na biblioteca: R$ {valor_total:.2f}')
     ('=' * 30)
     if not lista_livros:
-        print(f'Biblioteca Vazia. Total de R$ {total:.2f}')
+        print(f'Biblioteca Vazia. Total de R$ {valor_total:.2f}')
 
     
