@@ -78,7 +78,6 @@ def BuscaEstoque(estoque, lista_livros):
         print('=' * 30)
         print(f'Não disponível acima dessa quantidade.')
         print('=' * 30)
-
 ####################################################################
 def ValorTotalBiblioteca(lista_livros):
     valor_total = 0.0
@@ -90,15 +89,13 @@ def ValorTotalBiblioteca(lista_livros):
     if not lista_livros:
         print(f'Biblioteca Vazia. Total de R$ {valor_total:.2f}')
 ####################################################################
-def CarregaArquivo (livros_clientes.txt, lista_livros):
+def CarregaArquivo (livros_clientes, lista_livros):
     with open(livros_clientes.txt, 'r', encoding='uft-8') as arquivo:
         for linha_arquivo in arquivo:
-            linha_arquivo = linha_arquivo.strip()
-            if linha_arquivo:
-                campos = [campos.strip() for campo in linha_arquivo.strip(',')]
-                if len(campos) >=4:
-                    campos.titulo 
-
+            linha_arquivo = linha_arquivo.strip().split(',')
+            print(linha_arquivo)
+            # titulo = linha_arquivo.titulo[0]
+            # for livro in lista_livros:
 
 # def AtualizaArquivo (livro_casmurro, lista_biblioteca):
     
