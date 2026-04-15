@@ -1,5 +1,5 @@
-from Calc import LimparTerminal, ListarTudo, BuscaTitulo, BuscarCategoria, ValorLivro, ValorTotalBiblioteca, BuscaEstoque
-from Livraria import Livro
+from logica.Calc import LimparTerminal, ListarTudo, BuscaTitulo, BuscarCategoria, ValorLivro, ValorTotalBiblioteca, BuscaEstoque,CarregaArquivo, AtualizaArquivo
+from logica.Livraria import Livro
 biblioteca = []   
 
 def menu():
@@ -14,6 +14,7 @@ def menu():
     print('5 - Buscar livros por preço')
     print('6 - Buscar por quantidade em estoque')
     print('7 - Valor total no estoque')
+    print('8 - Carregar estoque')
     print('0 - Encerrar atividades')
 
 while True:
@@ -99,6 +100,17 @@ while True:
             ValorTotalBiblioteca(biblioteca)       
             input("\nPressione [Enter] para voltar ao menu...")
             LimparTerminal()
+
+        case '8':
+            CarregaArquivo()
+            input("\nPressione [Enter] para voltar ao menu...")            
+            LimparTerminal()
+
+        case '9':
+            AtualizaArquivo()
+            input("\nPressione [Enter] para voltar ao menu...")            
+            LimparTerminal()
+
 
         case '0':
             print('Encerrando...')

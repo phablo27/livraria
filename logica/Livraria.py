@@ -1,13 +1,16 @@
 # from Calc import valorLivro
 class Livro():
-    def __init__(self, titulo, cod, editora, area, ano, valor, qtd_estoque):
+    def __init__(self, titulo, cod, editora, area, ano, valor, carrega_arquivo, atualiza_arquivo, qtd_estoque):
         self.titulo = titulo
         self.cod = cod 
         self.editora = editora 
         self.area = area 
         self.ano = ano
         self.valor = valor
+        self.carrega_livro = carrega_arquivo
+        self.atualiza_arquivo = atualiza_arquivo
         self.qtd_estoque = qtd_estoque
+
         self.total = (qtd_estoque * valor)
 
     def __str__(self):
